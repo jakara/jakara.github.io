@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Jakara
-subtitle: 码上就好
+title: Jakara's Blog - 码海无涯
+subtitle: 文章千古事，更新贵坚持
 description: 码上就好
 author: Jakara
 language: zh-Hans
@@ -92,5 +92,11 @@ duoshuo_hotartical: true
 # JiaThis 分享服务
 jiathis: true
 
+#打赏
+#reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+#wechatpay: /path/to/wechat-reward-image
+#alipay: /path/to/alipay-reward-image
+
+#SEO
 baidu_analytics: f938e6ab0c6fb4111dd9f4a3154a29a9
 google_analytics: UA-77383143-1
