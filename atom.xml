@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jakara</title>
+  <subtitle>码上就好</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://jakara.github.io/"/>
+  <updated>2016-05-10T04:54:58.473Z</updated>
+  <id>http://jakara.github.io/</id>
+  
+  <author>
+    <name>Jakara</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello HEXO and Github Pages</title>
+    <link href="http://jakara.github.io/2016/05/06/hello-world/"/>
+    <id>http://jakara.github.io/2016/05/06/hello-world/</id>
+    <published>2016-05-06T10:32:16.921Z</published>
+    <updated>2016-05-10T04:54:58.473Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://jakara.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="HEXO" scheme="http://jakara.github.io/tags/HEXO/"/>
+    
+      <category term="GitHub Pages" scheme="http://jakara.github.io/tags/GitHub-Pages/"/>
+    
+      <category term="搭建Blog" scheme="http://jakara.github.io/tags/%E6%90%AD%E5%BB%BABlog/"/>
+    
+      <category term="教程" scheme="http://jakara.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="tutorial" scheme="http://jakara.github.io/tags/tutorial/"/>
+    
+  </entry>
+  
+</feed>
