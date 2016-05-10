@@ -14,7 +14,7 @@ tags:
 新换了工作之后， 一时比较清闲， ~~再次~~下定决心要开始写博客提升自己， 那么这就是本博客的第一篇了， 记录一些在使用Github-Pages和HXEO建站时遇到的问题。
 
 鉴于网上已经有一百万篇关于Github-Pages和HXEO建站的教程， 本文不会继续拾人牙慧重复记录整个建站的流程， 而是从我个人的角度记录一些建站过程中遇到的“坑”和一些~~菜鸡的~~思考
-
+<!--more-->
 ## 什么是Github-Pages
 
 - Github-Pages只是一个普通的Github Reponsitory， 所有Github Reponsitory具备的功能， Github-Pages也是一样的。

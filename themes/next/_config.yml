@@ -26,8 +26,8 @@ since: 2016
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
-  #tags: /tags
+  categories: /categories
+  tags: /tags
   archives: /archives
   #commonweal: /404.html
   about: /about
