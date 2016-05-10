@@ -12,9 +12,9 @@ tags:
 ---
 
 新换了工作之后， 一时比较清闲， ~~再次~~下定决心要开始写博客提升自己， 那么这就是本博客的第一篇了， 记录一些在使用Github-Pages和HXEO建站时遇到的问题。
-
-鉴于网上已经有一百万篇关于Github-Pages和HXEO建站的教程， 本文不会继续拾人牙慧重复记录整个建站的流程， 而是从我个人的角度记录一些建站过程中遇到的“坑”和一些~~菜鸡的~~思考
 <!--more-->
+鉴于网上已经有一百万篇关于Github-Pages和HXEO建站的教程， 本文不会继续拾人牙慧重复记录整个建站的流程， 而是从我个人的角度记录一些建站过程中遇到的“坑”和解决的方案。
+
 ## 什么是Github-Pages
 
 - Github-Pages只是一个普通的Github Reponsitory， 所有Github Reponsitory具备的功能， Github-Pages也是一样的。
@@ -35,3 +35,23 @@ HEXO是一个基于nodejs的静态网站生成器， 按照官方的说法， HE
 这一串的懵逼终于在看完文档之后得到了解答， 这个`target <folder>`其实只是HEXO的工作目录， HEXO使用nodejs处理这个目录下的文件， 并通过generate生成最终的静态网站， generate出来的内容才是最终需要push到Github的内容。 所以本地Clone的Github-Pages仓库目录， 和HEXO的工作目录其实完全没有关系， HEXO提供了deploy方法自动向某个Github仓库， 但其实我们手动拷贝generate生成的内容， 再push到Github也是一样的效果。
 
 对于用惯了Git的人来说， 肯定希望把HEXO的工作目录也通过Git管理起来， 我个人采取的方案是在Github-Pages的Repo里新建了一个Workspace分支， 用来保存所有的HEXO工作文件， 当然令建一个Repo也是完全可以的。
+
+## .swig文件是什么
+
+同Jade， EJS类似， Swig也是一个nodejs的模版引擎
+
+## Github Ribbon的添加
+
+许多技术博客都添加了Github Ribbon， 在Next主题下， Github Ribbon应该添加到`\themes\next\layout\_layout.swig`的如下位置， 否则有可能不起作用。
+
+```html
+<body>
+
+...
+
+ {% include '_scripts/third-party/lean-analytics.swig' %}
+  {% include '_scripts/baidu-push.swig' %}
+
+  <a href="https://github.com/you" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+</body>
+```
