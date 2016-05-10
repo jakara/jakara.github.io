@@ -87,6 +87,10 @@ creative_commons: by-nc-sa
 
 #commit service
 duoshuo_shortname: jakara
+duoshuo_hotartical: true
+
+# JiaThis 分享服务
+jiathis: true
 
 baidu_analytics: f938e6ab0c6fb4111dd9f4a3154a29a9
 google_analytics: UA-77383143-1
