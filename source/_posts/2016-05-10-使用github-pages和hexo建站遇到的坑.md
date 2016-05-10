@@ -11,34 +11,34 @@ tags:
 - 教程
 ---
 
-新换了工作之后， 一时比较清闲， ~~再次~~下定决心要开始写博客提升自己， 那么这就是本博客的第一篇了， 记录一些在使用Github-Pages和HXEO建站时遇到的问题。
+新换了工作之后， 一时比较清闲， ~~再次~~下定决心要开始写博客提升自己， 那么这就是本博客的第一篇了， 记录一些在使用[Github-Pages](https://pages.github.com/)和[HEXO](https://hexo.io/)建站时遇到的问题。
 <!--more-->
-鉴于网上已经有一百万篇关于Github-Pages和HXEO建站的教程， 本文不会继续拾人牙慧重复记录整个建站的流程， 而是从我个人的角度记录一些建站过程中遇到的“坑”和解决的方案。
+鉴于网上已经有一百万篇关于[Github-Pages](https://pages.github.com/)和[HEXO](https://hexo.io/)建站的教程， 本文不会继续拾人牙慧重复记录整个建站的流程， 而是从我个人的角度记录一些建站过程中遇到的“坑”和解决的方案。
 
-## 什么是Github-Pages
+## 什么是[Github-Pages](https://pages.github.com/)
 
-- Github-Pages只是一个普通的Github Reponsitory， 所有Github Reponsitory具备的功能， Github-Pages也是一样的。
-- Github-Pages是一个稍微特殊的Github Reponsitory， 他的命名必须符合默认的约定 -- *[github-user-name]*.github.io， 他的master分支可以理解为一个静态网站托管空间， 可以通过*[github-user-name]*.github.io从外部访问此网站。
-- Github-Pages一般被用作项目或组织的主页， 用于介绍本项目/组织， 也可以用来搭建一个个人博客。
+- [Github-Pages](https://pages.github.com/)只是一个普通的Github Reponsitory， 所有Github Reponsitory具备的功能， [Github-Pages](https://pages.github.com/)也是一样的。
+- [Github-Pages](https://pages.github.com/)是一个稍微特殊的Github Reponsitory， 他的命名必须符合默认的约定 -- *[github-user-name]*.github.io， 他的master分支可以理解为一个静态网站托管空间， 可以通过*[github-user-name]*.github.io从外部访问此网站。
+- [Github-Pages](https://pages.github.com/)一般被用作项目或组织的主页， 用于介绍本项目/组织， 也可以用来搭建一个个人博客。
 
-## 什么是HEXO
+## 什么是[HEXO](https://hexo.io/)
 
-HEXO是一个基于nodejs的静态网站生成器， 按照官方的说法， HEXO is a powerful blog framework powered by Node.js.
+[HEXO](https://hexo.io/)是一个基于[nodejs](https://nodejs.org/)的静态网站生成器， 按照官方的说法， [HEXO](https://hexo.io/) is a powerful blog framework powered by Node.js.
 
-## Github-Pages和HEXO是什么关系
+## [Github-Pages](https://pages.github.com/)和[HEXO](https://hexo.io/)是什么关系
 
-并没有半毛钱的关系。 对于静态网站生成和Github-Pages毫无经验的我， 看到网上推荐Github-Pages + HEXO自建bolg， 于是就跑去官网看教程， Github-Pages的教程非常简单易懂， 而看到HEXO官方教程的时候我就懵逼了。。原因就是这一句
+并没有半毛钱的关系。 对于静态网站生成和[Github-Pages](https://pages.github.com/)毫无经验的我， 看到网上推荐[Github-Pages](https://pages.github.com/) + [HEXO](https://hexo.io/)自建bolg， 于是就跑去官网看教程， [Github-Pages](https://pages.github.com/)的教程非常简单易懂， 而看到[HEXO](https://hexo.io/)官方教程的时候我就懵逼了。。原因就是这一句
 
-> Once Hexo is installed, run the following commands to initialise Hexo in the target &lt;folder&gt;.
+> Once [HEXO](https://hexo.io/) is installed, run the following commands to initialise [HEXO](https://hexo.io/) in the target &lt;folder&gt;.
 
-这个`target <folder>`是个什么鬼？ 难道是对应Github-Pages的根目录么？ Init生成的这一堆文件都是什么鬼？ 使用了nodejs， 难道Github-Pages提供了node环境么？
-这一串的懵逼终于在看完文档之后得到了解答， 这个`target <folder>`其实只是HEXO的工作目录， HEXO使用nodejs处理这个目录下的文件， 并通过generate生成最终的静态网站， generate出来的内容才是最终需要push到Github的内容。 所以本地Clone的Github-Pages仓库目录， 和HEXO的工作目录其实完全没有关系， HEXO提供了deploy方法自动向某个Github仓库， 但其实我们手动拷贝generate生成的内容， 再push到Github也是一样的效果。
+这个`target <folder>`是个什么鬼？ 难道是对应[Github-Pages](https://pages.github.com/)的根目录么？ Init生成的这一堆文件都是什么鬼？ 使用了[nodejs](https://nodejs.org/)， 难道[Github-Pages](https://pages.github.com/)提供了node环境么？
+这一串的懵逼终于在看完文档之后得到了解答， 这个`target <folder>`其实只是[HEXO](https://hexo.io/)的工作目录， [HEXO](https://hexo.io/)使用[nodejs](https://nodejs.org/)处理这个目录下的文件， 并通过generate生成最终的静态网站， generate出来的内容才是最终需要push到Github的内容。 所以本地Clone的[Github-Pages](https://pages.github.com/)仓库目录， 和[HEXO](https://hexo.io/)的工作目录其实完全没有关系， [HEXO](https://hexo.io/)提供了deploy方法自动向某个Github仓库， 但其实我们手动拷贝generate生成的内容， 再push到Github也是一样的效果。
 
-对于用惯了Git的人来说， 肯定希望把HEXO的工作目录也通过Git管理起来， 我个人采取的方案是在Github-Pages的Repo里新建了一个Workspace分支， 用来保存所有的HEXO工作文件， 当然令建一个Repo也是完全可以的。
+对于用惯了Git的人来说， 肯定希望把[HEXO](https://hexo.io/)的工作目录也通过Git管理起来， 我个人采取的方案是在[Github-Pages](https://pages.github.com/)的Repo里新建了一个Workspace分支， 用来保存所有的[HEXO](https://hexo.io/)工作文件， 当然令建一个Repo也是完全可以的。
 
 ## .swig文件是什么
 
-同Jade， EJS类似， Swig也是一个nodejs的模版引擎
+同[jade](http://jade-lang.com/)， [EJS](http://www.embeddedjs.com/)类似， [Swig](http://paularmstrong.github.io/swig/)也是一个[nodejs](https://nodejs.org/)的模版引擎
 
 ## Github Ribbon的添加
 
