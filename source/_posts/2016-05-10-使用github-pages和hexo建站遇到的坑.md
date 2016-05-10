@@ -23,5 +23,15 @@ tags:
 
 ## 什么是HEXO
 
+HEXO是一个基于nodejs的静态网站生成器， 按照官方的说法， HEXO is a powerful blog framework powered by Node.js.
 
 ## Github-Pages和HEXO是什么关系
+
+并没有半毛钱的关系。 对于静态网站生成和Github-Pages毫无经验的我， 看到网上推荐Github-Pages + HEXO自建bolg， 于是就跑去官网看教程， Github-Pages的教程非常简单易懂， 而看到HEXO官方教程的时候我就懵逼了。。原因就是这一句
+
+> Once Hexo is installed, run the following commands to initialise Hexo in the target &lt;folder&gt;.
+
+这个`target <folder>`是个什么鬼？ 难道是对应Github-Pages的根目录么？ Init生成的这一堆文件都是什么鬼？ 使用了nodejs， 难道Github-Pages提供了node环境么？
+这一串的懵逼终于在看完文档之后得到了解答， 这个`target <folder>`其实只是HEXO的工作目录， HEXO使用nodejs处理这个目录下的文件， 并通过generate生成最终的静态网站， generate出来的内容才是最终需要push到Github的内容。 所以本地Clone的Github-Pages仓库目录， 和HEXO的工作目录其实完全没有关系， HEXO提供了deploy方法自动向某个Github仓库， 但其实我们手动拷贝generate生成的内容， 再push到Github也是一样的效果。
+
+对于用惯了Git的人来说， 肯定希望把HEXO的工作目录也通过Git管理起来， 我个人采取的方案是在Github-Pages的Repo里新建了一个Workspace分支， 用来保存所有的HEXO工作文件， 当然令建一个Repo也是完全可以的。
